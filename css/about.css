@@ -1,0 +1,234 @@
+
+
+.about-hero {
+  background: linear-gradient(to bottom, var(--color-primary-light), var(--color-gray-100));
+  padding: calc(var(--space-6) * 2) 0 var(--space-4);
+  margin-top: var(--space-6);
+  text-align: center;
+}
+
+.about-hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-2);
+  color: var(--color-gray-900);
+}
+
+.about-hero p {
+  font-size: 1.25rem;
+  color: var(--color-gray-700);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.about-story {
+  padding: var(--space-8) 0;
+  background-color: var(--color-white);
+}
+
+.story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+  align-items: center;
+}
+
+.story-image {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.story-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.story-image:hover img {
+  transform: scale(1.05);
+}
+
+.story-content h3 {
+  color: var(--color-primary-dark);
+  margin-bottom: var(--space-3);
+  font-size: 2rem;
+}
+
+.story-content p {
+  margin-bottom: var(--space-3);
+  color: var(--color-gray-700);
+  line-height: 1.8;
+}
+
+.about-values {
+  padding: var(--space-8) 0;
+  background-color: var(--color-gray-100);
+}
+
+.about-values h3 {
+  text-align: center;
+  margin-bottom: var(--space-6);
+  font-size: 2rem;
+  color: var(--color-gray-900);
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+}
+
+.value-card {
+  background-color: var(--color-white);
+  padding: var(--space-4);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-normal);
+}
+
+.value-card:hover {
+  transform: translateY(-10px);
+}
+
+.value-icon {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-2);
+}
+
+.value-card h4 {
+  color: var(--color-primary-dark);
+  margin-bottom: var(--space-2);
+}
+
+.value-card p {
+  color: var(--color-gray-600);
+  font-size: 0.925rem;
+}
+
+.about-process {
+  padding: var(--space-8) 0;
+  background-color: var(--color-white);
+}
+
+.about-process h3 {
+  text-align: center;
+  margin-bottom: var(--space-6);
+  font-size: 2rem;
+  color: var(--color-gray-900);
+}
+
+.process-timeline {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.process-timeline::before {
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-primary-light);
+  z-index: 1;
+}
+
+.timeline-item {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  flex: 1;
+}
+
+.timeline-number {
+  width: 80px;
+  height: 80px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 auto var(--space-2);
+  transition: transform var(--transition-normal);
+}
+
+.timeline-item:hover .timeline-number {
+  transform: scale(1.1);
+  background-color: var(--color-primary-dark);
+}
+
+.timeline-item h4 {
+  color: var(--color-primary-dark);
+  margin-bottom: var(--space-1);
+}
+
+.timeline-item p {
+  color: var(--color-gray-600);
+  font-size: 0.875rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .process-timeline {
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+  
+  .process-timeline::before {
+    width: 2px;
+    height: 100%;
+    left: 40px;
+    top: 0;
+  }
+  
+  .timeline-item {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    gap: var(--space-3);
+  }
+  
+  .timeline-number {
+    margin: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .story-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .story-image {
+    order: -1;
+  }
+  
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero h2 {
+    font-size: 2rem;
+  }
+  
+  .about-hero p {
+    font-size: 1rem;
+  }
+  
+  .story-content h3 {
+    font-size: 1.75rem;
+  }
+}

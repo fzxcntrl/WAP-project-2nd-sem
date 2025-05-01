@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Cloud Cakes</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="overlay" id="overlay"></div>
+  
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <h1>Cloud Cakes</h1>
+          <p class="tagline">Desserts from the heavens</p>
+        </div>
+        <nav class="main-nav">
+          <button class="mobile-menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul class="nav-list" id="navList">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="my-orders.html">My Orders</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+            <li><a href="#" class="btn-account" id="accountBtn">My Account</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="contact-hero">
+    <div class="container">
+      <h2>Get in Touch</h2>
+      <p>Have questions? We'd love to hear from you!</p>
+    </div>
+  </section>
+
+  <section class="contact-content">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="info-card">
+            <h3>Visit Us</h3>
+            <p>Farhat Nagar, Aurangabad</p>
+            <p>Maharashtra, India</p>
+          </div>
+          
+          <div class="info-card">
+            <h3>Business Hours</h3>
+            <p>Monday - Friday: 12 PM - 10 PM</p>
+            <p>Saturday: 12 PM - 11 PM</p>
+            <p>Sunday: Closed</p>
+          </div>
+          
+          <div class="info-card">
+            <h3>Contact</h3>
+            <p>Phone: <a href="tel:+919175111060">+91 91751 11060</a></p>
+            <p>Email: <a href="mailto:cloudcakes@gmail.com">cloudcakes@gmail.com</a></p>
+          </div>
+          
+          <div class="info-card social-links">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+              <a href="https://www.instagram.com/your-instagram-handle" target="_blank" class="instagram-icon">
+                <!-- Space for Instagram icon -->
+              </a>
+            </div>
+          </div>
+          
+          <div class="info-card owner-info">
+            <h3>Meet the Baker</h3>
+            <div class="owner-photo">
+              <!-- Space for owner's photo -->
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-form-container">
+          <h3>Send us a Message</h3>
+          <form id="contactForm" class="contact-form">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <select id="subject" name="subject" required>
+                <option value="">Select a subject</option>
+                <option value="order">Order Inquiry</option>
+                <option value="custom">Custom Cake Request</option>
+                <option value="feedback">Feedback</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <div class="footer-logo">
+            <h2>Cloud Cakes</h2>
+            <p>Desserts from the heavens</p>
+          </div>
+          <p class="footer-desc">Bringing joy to your special occasions with our heavenly cloud cakes since 2025.</p>
+        </div>
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="my-orders.html">My Orders</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Contact Us</h3>
+          <ul class="footer-contact">
+            <li>Farhat Nagar, Aurangabad</li>
+            <li>Phone: +91 91751 11060</li>
+            <li>Email: cloudcakes@gmail.com</li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Hours</h3>
+          <ul class="footer-hours">
+            <li>Monday - Friday: 12 PM - 10 PM</li>
+            <li>Saturday: 12 PM - 11 PM</li>
+            <li>Sunday: Closed</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Cloud Cakes. All rights reserved.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><i class="social-icon facebook"></i></a>
+          <a href="https://www.instagram.com/your-instagram-handle" aria-label="Instagram"><i class="social-icon instagram"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="social-icon pinterest"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>

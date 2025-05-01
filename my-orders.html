@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Orders | Cloud Cakes</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/my-orders.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="overlay" id="overlay"></div>
+  
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <h1>Cloud Cakes</h1>
+          <p class="tagline">Desserts from the heavens</p>
+        </div>
+        <nav class="main-nav">
+          <button class="mobile-menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul class="nav-list" id="navList">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="my-orders.html" class="active">My Orders</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#" class="btn-account" id="accountBtn">My Account</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="orders-hero">
+    <div class="container">
+      <h2>My Orders</h2>
+      <p>Track and manage your cake orders</p>
+    </div>
+  </section>
+
+  <section class="orders-content">
+    <div class="container">
+      <div class="orders-tabs">
+        <button class="tab-btn active" data-tab="current">Current Orders</button>
+        <button class="tab-btn" data-tab="previous">Previous Orders</button>
+      </div>
+
+      <div class="orders-container">
+
+        <div class="tab-content active" id="current">
+          <div class="order-card">
+            <div class="order-header">
+              <h3>Order #CC12345</h3>
+              <span class="order-status preparing">Preparing</span>
+            </div>
+            <div class="order-details">
+              <div class="cake-preview">
+                <img src="https://images.pexels.com/photos/1126359/pexels-photo-1126359.jpeg" alt="Classic Cloud Cake">
+              </div>
+              <div class="order-info">
+                <p class="cake-name">Classic Cloud Cake</p>
+                <p class="cake-specs">Size: 8" | Filling: Vanilla Cloud Cream</p>
+                <p class="delivery-date">Expected Delivery: March 15, 2025</p>
+                <div class="order-progress">
+                  <div class="progress-step completed">
+                    <span class="step-icon">✓</span>
+                    <span class="step-label">Order Confirmed</span>
+                  </div>
+                  <div class="progress-step active">
+                    <span class="step-icon">🧁</span>
+                    <span class="step-label">Baking</span>
+                  </div>
+                  <div class="progress-step">
+                    <span class="step-icon">🎨</span>
+                    <span class="step-label">Decorating</span>
+                  </div>
+                  <div class="progress-step">
+                    <span class="step-icon">🚚</span>
+                    <span class="step-label">Out for Delivery</span>
+                  </div>
+                </div>
+              </div>
+              <div class="order-actions">
+                <button class="btn btn-outline">Track Order</button>
+                <button class="btn btn-primary">Contact Us</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="tab-content" id="previous">
+          <div class="order-card completed">
+            <div class="order-header">
+              <h3>Order #CC12344</h3>
+              <span class="order-status delivered">Delivered</span>
+            </div>
+            <div class="order-details">
+              <div class="cake-preview">
+                <img src="https://images.pexels.com/photos/1070850/pexels-photo-1070850.jpeg" alt="Strawberry Dream Cake">
+              </div>
+              <div class="order-info">
+                <p class="cake-name">Strawberry Dream Cake</p>
+                <p class="cake-specs">Size: 6" | Filling: Strawberry Whip</p>
+                <p class="delivery-date">Delivered: March 1, 2025</p>
+                <div class="order-rating">
+                  <span class="stars">★★★★★</span>
+                  <span class="rating-text">Excellent!</span>
+                </div>
+              </div>
+              <div class="order-actions">
+                <button class="btn btn-primary">Order Again</button>
+                <button class="btn btn-outline">View Details</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/my-orders.js"></script>
+</body>
+</html>

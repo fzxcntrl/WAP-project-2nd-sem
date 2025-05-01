@@ -1,0 +1,237 @@
+/* ========== SPECIAL DATES PAGE STYLES ========== */
+
+.special-dates-hero {
+  background-color: var(--color-primary-light);
+  padding: var(--space-7) 0;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.special-dates-hero .container {
+  width: 100%;
+  max-width: var(--container-max);
+}
+
+.special-dates-hero h2 {
+  color: var(--color-gray-900);
+  margin-bottom: var(--space-3);
+  font-size: 2.75rem;
+  line-height: 1.2;
+}
+
+.special-dates-hero p {
+  color: var(--color-gray-700);
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.special-dates-form-section {
+  padding: var(--space-6) 0;
+  background-color: var(--color-white);
+}
+
+.special-dates-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto var(--space-5);
+}
+
+.special-dates-intro h3 {
+  margin-bottom: var(--space-2);
+  color: var(--color-gray-900);
+}
+
+.special-dates-intro p {
+  color: var(--color-gray-700);
+}
+
+.dates-container {
+  background-color: var(--color-gray-100);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  box-shadow: var(--shadow-md);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.your-dates,
+.loved-ones-dates,
+.special-events,
+.date-preferences {
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--color-gray-300);
+}
+
+.your-dates h4,
+.loved-ones-dates h4,
+.special-events h4,
+.date-preferences h4 {
+  margin-bottom: var(--space-2);
+  color: var(--color-primary-dark);
+}
+
+.date-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--space-2);
+}
+
+.loved-one-row,
+.special-event-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+  position: relative;
+  padding: var(--space-3);
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-remove-date {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: var(--color-error-light);
+  color: var(--color-error-dark);
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-remove-date:hover {
+  background-color: var(--color-error);
+  color: var(--color-white);
+}
+
+.btn-remove-date:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.date-benefits {
+  padding: var(--space-6) 0;
+  background-color: var(--color-accent-light);
+  text-align: center;
+}
+
+.date-benefits h3 {
+  margin-bottom: var(--space-4);
+  color: var(--color-gray-900);
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-3);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.benefit-card {
+  background-color: var(--color-white);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-normal);
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+}
+
+.benefit-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto var(--space-2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-primary-light);
+}
+
+.reminder-icon::before {
+  content: "⏰";
+  font-size: 2rem;
+}
+
+.discount-icon::before {
+  content: "🎁";
+  font-size: 2rem;
+}
+
+.recommendation-icon::before {
+  content: "🍰";
+  font-size: 2rem;
+}
+
+.planning-icon::before {
+  content: "📅";
+  font-size: 2rem;
+}
+
+.benefit-card h4 {
+  margin-bottom: var(--space-1);
+  color: var(--color-primary-dark);
+}
+
+.benefit-card p {
+  color: var(--color-gray-700);
+  font-size: 0.9rem;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-4);
+}
+
+.success-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto var(--space-3);
+  background-color: var(--color-success-light);
+  color: var(--color-success-dark);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .loved-one-row,
+  .special-event-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .loved-one-row .form-group,
+  .special-event-row .form-group {
+    margin-bottom: var(--space-2);
+  }
+  
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .benefit-card {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+} 

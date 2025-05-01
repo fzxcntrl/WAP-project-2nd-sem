@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Custom Cake | Cloud Cakes</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/order.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="overlay" id="overlay"></div>
+  
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <h1>Cloud Cakes</h1>
+          <p class="tagline">Desserts from the heavens</p>
+        </div>
+        <nav class="main-nav">
+          <button class="mobile-menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul class="nav-list" id="navList">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="order.html" class="active">Order Now</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#" class="btn-account" id="accountBtn">My Account</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="order-hero">
+    <div class="container">
+      <h2>Create Your Perfect Cloud Cake</h2>
+      <p>Customize your heavenly creation and share your special dates with us</p>
+    </div>
+  </section>
+
+  <section class="order-form-section">
+    <div class="container">
+      <div class="progress-bar">
+        <div class="progress-step active" data-step="1">
+          <div class="step-number">1</div>
+          <div class="step-text">Choose Cake</div>
+        </div>
+        <div class="progress-connector"></div>
+        <div class="progress-step" data-step="2">
+          <div class="step-number">2</div>
+          <div class="step-text">Customize</div>
+        </div>
+        <div class="progress-connector"></div>
+        <div class="progress-step" data-step="3">
+          <div class="step-number">3</div>
+          <div class="step-text">Add Details</div>
+        </div>
+        <div class="progress-connector"></div>
+        <div class="progress-step" data-step="4">
+          <div class="step-number">4</div>
+          <div class="step-text">Review</div>
+        </div>
+      </div>
+
+      <form id="orderForm" class="order-form">
+
+        <div class="form-step active" id="step1">
+          <h3>Choose Your Cloud Cake</h3>
+          <div class="cake-selection">
+            <div class="cake-option">
+              <input type="radio" name="cakeType" id="classicCloud" value="Classic Cloud" checked>
+              <label for="classicCloud">
+                <img src="https://images.pexels.com/photos/1126359/pexels-photo-1126359.jpeg" alt="Classic Cloud Cake">
+                <div class="cake-option-details">
+                  <h4>Classic Cloud</h4>
+                  <p>Our signature light vanilla cake with cloud-like frosting</p>
+                  <span class="cake-price">₹499</span>
+                </div>
+              </label>
+            </div>
+
+            <div class="cake-option">
+              <input type="radio" name="cakeType" id="strawberryDream" value="Strawberry Dream">
+              <label for="strawberryDream">
+                <img src="https://images.pexels.com/photos/1070850/pexels-photo-1070850.jpeg" alt="Strawberry Dream Cake">
+                <div class="cake-option-details">
+                  <h4>Strawberry Dream</h4>
+                  <p>Delicate strawberry cake with whipped cream and fresh berries</p>
+                  <span class="cake-price">₹699</span>
+                </div>
+              </label>
+            </div>
+
+            <div class="cake-option">
+              <input type="radio" name="cakeType" id="chocolateHeaven" value="Chocolate Heaven">
+              <label for="chocolateHeaven">
+                <img src="https://images.pexels.com/photos/1291712/pexels-photo-1291712.jpeg" alt="Chocolate Heaven Cake">
+                <div class="cake-option-details">
+                  <h4>Chocolate Heaven</h4>
+                  <p>Rich chocolate cake with light chocolate mousse frosting</p>
+                  <span class="cake-price">₹799</span>
+                </div>
+              </label>
+            </div>
+
+            <div class="cake-option">
+              <input type="radio" name="cakeType" id="lemonBliss" value="Lemon Bliss">
+              <label for="lemonBliss">
+                <img src="https://images.pexels.com/photos/2144112/pexels-photo-2144112.jpeg" alt="Lemon Bliss Cake">
+                <div class="cake-option-details">
+                  <h4>Lemon Bliss</h4>
+                  <p>Zesty lemon cake with cloud-like meringue topping</p>
+                  <span class="cake-price">₹599</span>
+                </div>
+              </label>
+            </div>
+          </div>
+          <div class="form-navigation">
+            <button type="button" class="btn btn-primary next-step">Continue to Customize</button>
+          </div>
+        </div>
+
+
+        <div class="form-step" id="step2">
+          <h3>Customize Your Cake</h3>
+          <div class="form-group">
+            <label for="cakeSize">Size</label>
+            <select id="cakeSize" name="cakeSize" required>
+              <option value="6inch">6" (serves 8-10) +₹0</option>
+              <option value="8inch">8" (serves 12-16) +₹8</option>
+              <option value="10inch">10" (serves 20-25) +₹16</option>
+              <option value="12inch">12" (serves 30-40) +₹24</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="cakeFilling">Filling</label>
+            <select id="cakeFilling" name="cakeFilling" required>
+              <option value="vanilla">Vanilla Cloud Cream +₹0</option>
+              <option value="chocolate">Chocolate Mousse +₹2</option>
+              <option value="strawberry">Strawberry Whip +₹2</option>
+              <option value="lemon">Lemon Curd +₹2</option>
+              <option value="caramel">Salted Caramel +₹3</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <p class="label-text">Add-ons</p>
+            <div class="checkbox-group">
+              <div class="checkbox-option">
+                <input type="checkbox" name="addOns" id="freshFruit" value="Fresh Fruit">
+                <label for="freshFruit">Fresh Fruit Topping (+₹4)</label>
+              </div>
+              <div class="checkbox-option">
+                <input type="checkbox" name="addOns" id="edibleFlowers" value="Edible Flowers">
+                <label for="edibleFlowers">Edible Flowers (+₹6)</label>
+              </div>
+              <div class="checkbox-option">
+                <input type="checkbox" name="addOns" id="goldDust" value="Gold Dust">
+                <label for="goldDust">Gold Dust Shimmer (+₹5)</label>
+              </div>
+              <div class="checkbox-option">
+                <input type="checkbox" name="addOns" id="chocolateDrip" value="Chocolate Drip">
+                <label for="chocolateDrip">Chocolate Drip (+₹3)</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="specialInstructions">Special Instructions</label>
+            <textarea id="specialInstructions" name="specialInstructions" rows="4" placeholder="Any allergies, special requests, or decoration ideas?"></textarea>
+          </div>
+
+          <div class="form-navigation">
+            <button type="button" class="btn btn-outline prev-step">Back</button>
+            <button type="button" class="btn btn-primary next-step">Continue to Details</button>
+          </div>
+        </div>
+
+
+        <div class="form-step" id="step3">
+          <h3>Your Details</h3>
+          
+          <div class="form-section">
+            <h4>Personal Information</h4>
+            <div class="form-group">
+              <label for="customerName">Full Name</label>
+              <input type="text" id="customerName" name="customerName" required>
+            </div>
+            <div class="form-group">
+              <label for="customerEmail">Email</label>
+              <input type="email" id="customerEmail" name="customerEmail" required>
+            </div>
+            <div class="form-group">
+              <label for="customerPhone">Phone</label>
+              <input type="tel" id="customerPhone" name="customerPhone" required>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h4>Your Special Date</h4>
+            <div class="form-group">
+              <label for="customerBirthday">Your Birthday</label>
+              <input type="date" id="customerBirthday" name="customerBirthday">
+            </div>
+          </div>
+
+          <div class="form-section" id="specialDatesSection">
+            <h4>Loved Ones' Special Dates</h4>
+            <p class="helper-text">We'll send you reminders about upcoming events so you can celebrate with a perfect cake</p>
+            
+            <div class="loved-one-row" id="lovedOne1">
+              <div class="form-group">
+                <label for="lovedOneName1">Name</label>
+                <input type="text" id="lovedOneName1" name="lovedOneName1">
+              </div>
+              <div class="form-group">
+                <label for="lovedOneRelation1">Relationship</label>
+                <input type="text" id="lovedOneRelation1" name="lovedOneRelation1" placeholder="e.g., Spouse, Child, Friend">
+              </div>
+              <div class="form-group">
+                <label for="lovedOneBirthday1">Birthday</label>
+                <input type="date" id="lovedOneBirthday1" name="lovedOneBirthday1">
+              </div>
+            </div>
+            
+            <div id="additionalLovedOnes"></div>
+            
+            <button type="button" class="btn btn-outline btn-small" id="addLovedOneBtn">+ Add Another Person</button>
+          </div>
+
+          <div class="form-section">
+            <h4>Special Events</h4>
+            <div class="form-group">
+              <label for="specialEvent">Upcoming Event</label>
+              <input type="text" id="specialEvent" name="specialEvent" placeholder="e.g., Anniversary, Graduation">
+            </div>
+            <div class="form-group">
+              <label for="specialEventDate">Event Date</label>
+              <input type="date" id="specialEventDate" name="specialEventDate">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="checkbox-option">
+              <input type="checkbox" name="reminders" id="reminders" checked>
+              <label for="reminders">Send me reminders about upcoming special dates</label>
+            </div>
+          </div>
+
+          <div class="form-navigation">
+            <button type="button" class="btn btn-outline prev-step">Back</button>
+            <button type="button" class="btn btn-primary next-step">Review Order</button>
+          </div>
+        </div>
+
+
+        <div class="form-step" id="step4">
+          <h3>Review Your Order</h3>
+          
+          <div class="order-summary">
+            <div class="summary-section">
+              <h4>Cake Selection</h4>
+              <div class="summary-row">
+                <span class="summary-label">Cake Type:</span>
+                <span class="summary-value" id="summaryType">Classic Cloud</span>
+              </div>
+              <div class="summary-row">
+                <span class="summary-label">Size:</span>
+                <span class="summary-value" id="summarySize">6" (serves 8-10)</span>
+              </div>
+              <div class="summary-row">
+                <span class="summary-label">Filling:</span>
+                <span class="summary-value" id="summaryFilling">Vanilla Cloud Cream</span>
+              </div>
+              <div class="summary-row">
+                <span class="summary-label">Add-ons:</span>
+                <span class="summary-value" id="summaryAddons">None</span>
+              </div>
+              <div class="summary-row">
+                <span class="summary-label">Special Instructions:</span>
+                <span class="summary-value" id="summaryInstructions">None</span>
+              </div>
+            </div>
+            
+            <div class="summary-section">
+              <h4>Customer Details</h4>
+              <div class="summary-row">
+                <span class="summary-label">Name:</span>
+                <span class="summary-value" id="summaryName"></span>
+              </div>
+              <div class="summary-row">
+                <span class="summary-label">Email:</span>
+                <span class="summary-value" id="summaryEmail"></span>
+              </div>
+              <div class="summary-row">
+                <span class="summary-label">Phone:</span>
+                <span class="summary-value" id="summaryPhone"></span>
+              </div>
+            </div>
+            
+            <div class="summary-section">
+              <h4>Special Dates</h4>
+              <div class="summary-row">
+                <span class="summary-label">Your Birthday:</span>
+                <span class="summary-value" id="summaryBirthday">Not provided</span>
+              </div>
+              <div id="summaryLovedOnes">
+                <!-- Loved ones will be populated by JavaScript -->
+              </div>
+              <div class="summary-row">
+                <span class="summary-label">Special Event:</span>
+                <span class="summary-value" id="summaryEvent">None</span>
+              </div>
+            </div>
+            
+            <div class="summary-section">
+              <h4>Price Summary</h4>
+              <div class="summary-row">
+                <span class="summary-label">Base Price:</span>
+                <span class="summary-value">₹<span id="summaryBasePrice">32.99</span></span>
+              </div>
+              <div class="summary-row">
+                <span class="summary-label">Size Adjustment:</span>
+                <span class="summary-value">₹<span id="summarySizePrice">0.00</span></span>
+              </div>
+              <div class="summary-row">
+                <span class="summary-label">Filling:</span>
+                <span class="summary-value">₹<span id="summaryFillingPrice">0.00</span></span>
+              </div>
+              <div class="summary-row">
+                <span class="summary-label">Add-ons:</span>
+                <span class="summary-value">₹<span id="summaryAddonsPrice">0.00</span></span>
+              </div>
+              <div class="summary-row total">
+                <span class="summary-label">Total:</span>
+                <span class="summary-value">₹<span id="summaryTotalPrice">32.99</span></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="checkbox-option">
+              <input type="checkbox" name="termsAgree" id="termsAgree" required>
+              <label for="termsAgree">I agree to the terms and conditions</label>
+            </div>
+          </div>
+
+          <div class="form-navigation">
+            <button type="button" class="btn btn-outline prev-step">Back</button>
+            <button type="submit" class="btn btn-primary">Place Order</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section class="order-faq">
+    <div class="container">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <div class="faq-container">
+        <div class="faq-item">
+          <button class="faq-question">
+            How far in advance should I order?
+            <span class="faq-icon"></span>
+          </button>
+          <div class="faq-answer">
+            <p>We recommend placing your order at least 3-5 days in advance for standard cakes, and 7-10 days for custom designs or large orders. For special events like weddings, please order 2-4 weeks in advance.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Do you deliver?
+            <span class="faq-icon"></span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes, we offer delivery within a 25-mile radius of our bakery. Delivery fees start at ₹10 and vary based on distance. Pickup is always free and available during store hours.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            How are my special dates used?
+            <span class="faq-icon"></span>
+          </button>
+          <div class="faq-answer">
+            <p>We store your special dates (with your permission) to send you friendly reminders 2 weeks before the occasion. This gives you time to order a cake for your celebration. Your information is never shared with third parties.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            Can you accommodate dietary restrictions?
+            <span class="faq-icon"></span>
+          </button>
+          <div class="faq-answer">
+            <p>Yes! We offer gluten-free, dairy-free, and vegan options for most of our cake flavors. Please specify any allergies or dietary requirements in the special instructions section of your order.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <div class="footer-logo">
+            <h2>Cloud Cakes</h2>
+            <p>Desserts from the heavens</p>
+          </div>
+          <p class="footer-desc">Bringing joy to your special occasions with our heavenly cloud cakes since 2020.</p>
+        </div>
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="order.html">Order Now</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Contact Us</h3>
+          <ul class="footer-contact">
+            <li>123 Bakery Lane, Sweet City</li>
+            <li>Phone: (555) 123-4567</li>
+            <li>Email: hello@cloudcakes.com</li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Hours</h3>
+          <ul class="footer-hours">
+            <li>Monday - Friday: 9am - 6pm</li>
+            <li>Saturday: 10am - 5pm</li>
+            <li>Sunday: Closed</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Cloud Cakes. All rights reserved.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><i class="social-icon facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i class="social-icon instagram"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="social-icon pinterest"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal" id="successModal">
+    <div class="modal-content">
+      <span class="close-modal" id="closeSuccessModal">&times;</span>
+      <div class="success-content">
+        <div class="success-icon">✓</div>
+        <h2>Order Placed Successfully!</h2>
+        <p>Thank you for your order. We've sent a confirmation to your email.</p>
+        <p>Order #: <span id="orderNumber">CC12345</span></p>
+        <button class="btn btn-primary" id="closeSuccessBtn">Continue</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/order.js"></script>
+</body>
+</html>

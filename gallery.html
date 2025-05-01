@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cake Gallery | Cloud Cakes</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/gallery.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="overlay" id="overlay"></div>
+  
+
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <h1>Cloud Cakes</h1>
+          <p class="tagline">Desserts from the heavens</p>
+        </div>
+        <nav class="main-nav">
+          <button class="mobile-menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul class="nav-list" id="navList">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html" class="active">Gallery</a></li>
+            <li><a href="my-orders.html">My Orders</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#" class="btn-account" id="accountBtn">My Account</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <section class="gallery-hero">
+    <div class="container">
+      <h2>Our Heavenly Collection</h2>
+      <p>Explore our wide range of handcrafted cakes for every occasion</p>
+    </div>
+  </section>
+
+  <section class="gallery-filters">
+    <div class="container">
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">All Cakes</button>
+        <button class="filter-btn" data-filter="signature">Signature</button>
+        <button class="filter-btn" data-filter="chocolate">Chocolate</button>
+        <button class="filter-btn" data-filter="fruit">Fruit</button>
+        <button class="filter-btn" data-filter="wedding">Wedding</button>
+        <button class="filter-btn" data-filter="custom">Custom</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery-grid">
+    <div class="container">
+      <div class="cake-grid">
+
+
+
+        <div class="cake-card" data-category="signature">
+          <div class="cake-image">
+            <img src="https://images.pexels.com/photos/1126359/pexels-photo-1126359.jpeg" alt="Classic Cloud Cake">
+          </div>
+          <div class="cake-details">
+            <h3>Classic Cloud</h3>
+            <p>Light vanilla cake with cloud-like frosting</p>
+            <div class="cake-price">₹499</div>
+            <button class="btn btn-primary">Order Now</button>
+          </div>
+        </div>
+
+
+        <div class="cake-card" data-category="signature">
+          <div class="cake-image">
+            <img src="https://images.pexels.com/photos/1070850/pexels-photo-1070850.jpeg" alt="Strawberry Dream">
+          </div>
+          <div class="cake-details">
+            <h3>Strawberry Dream</h3>
+            <p>Fresh strawberry cake with cream</p>
+            <div class="cake-price">₹699</div>
+            <button class="btn btn-primary">Order Now</button>
+          </div>
+        </div>
+
+
+        <div class="cake-card" data-category="chocolate">
+          <div class="cake-image">
+            <img src="https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg" alt="Dark Chocolate Truffle">
+          </div>
+          <div class="cake-details">
+            <h3>Dark Chocolate Truffle</h3>
+            <p>Rich dark chocolate with ganache</p>
+            <div class="cake-price">₹899</div>
+            <button class="btn btn-primary">Order Now</button>
+          </div>
+        </div>
+
+
+
+        <div class="cake-card" data-category="chocolate">
+          <div class="cake-image">
+            <img src="https://images.pexels.com/photos/132694/pexels-photo-132694.jpeg" alt="Chocolate Orange">
+          </div>
+          <div class="cake-details">
+            <h3>Chocolate Orange</h3>
+            <p>Dark chocolate with orange zest</p>
+            <div class="cake-price">₹799</div>
+            <button class="btn btn-primary">Order Now</button>
+          </div>
+        </div>
+
+
+
+        <div class="cake-card" data-category="fruit">
+          <div class="cake-image">
+            <img src="https://images.pexels.com/photos/1998920/pexels-photo-1998920.jpeg" alt="Mixed Berry Delight">
+          </div>
+          <div class="cake-details">
+            <h3>Mixed Berry Delight</h3>
+            <p>Fresh mixed berries with cream</p>
+            <div class="cake-price">₹999</div>
+            <button class="btn btn-primary">Order Now</button>
+          </div>
+        </div>
+
+
+
+        <div class="cake-card" data-category="fruit">
+          <div class="cake-image">
+            <img src="https://images.pexels.com/photos/1854652/pexels-photo-1854652.jpeg" alt="Tropical Paradise">
+          </div>
+          <div class="cake-details">
+            <h3>Tropical Paradise</h3>
+            <p>Mango and passion fruit cream</p>
+            <div class="cake-price">₹899</div>
+            <button class="btn btn-primary">Order Now</button>
+          </div>
+        </div>
+
+
+        <div class="cake-card" data-category="wedding">
+          <div class="cake-image">
+            <img src="https://images.pexels.com/photos/587741/pexels-photo-587741.jpeg" alt="Royal Wedding">
+          </div>
+          <div class="cake-details">
+            <h3>Royal Wedding</h3>
+            <p>Three-tier elegant wedding cake</p>
+            <div class="cake-price">₹9,999</div>
+            <button class="btn btn-primary">Order Now</button>
+          </div>
+        </div>
+
+
+
+        <div class="cake-card" data-category="wedding">
+          <div class="cake-image">
+            <img src="https://images.pexels.com/photos/1702373/pexels-photo-1702373.jpeg" alt="Garden Romance">
+          </div>
+          <div class="cake-details">
+            <h3>Garden Romance</h3>
+            <p>Floral themed wedding cake</p>
+            <div class="cake-price">₹12,999</div>
+            <button class="btn btn-primary">Order Now</button>
+          </div>
+        </div>
+
+
+        <div class="cake-card" data-category="custom">
+          <div class="cake-image">
+            <img src="https://images.pexels.com/photos/1721934/pexels-photo-1721934.jpeg" alt="Design Your Own">
+          </div>
+          <div class="cake-details">
+            <h3>Design Your Own</h3>
+            <p>Customize every detail</p>
+            <div class="cake-price">Starting from ₹1,499</div>
+            <button class="btn btn-primary">Start Designing</button>
+          </div>
+        </div>
+
+
+        <div class="cake-card" data-category="custom">
+          <div class="cake-image">
+            <img src="https://images.pexels.com/photos/1027811/pexels-photo-1027811.jpeg" alt="Theme Cake">
+          </div>
+          <div class="cake-details">
+            <h3>Theme Cake</h3>
+            <p>Choose your favorite theme</p>
+            <div class="cake-price">Starting from ₹1,999</div>
+            <button class="btn btn-primary">Start Designing</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+
+  </footer>
+
+
+
+  <script src="js/main.js"></script>
+  <script src="js/gallery.js"></script>
+</body>
+</html>
