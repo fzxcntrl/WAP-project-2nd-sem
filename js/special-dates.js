@@ -1,9 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // Initialize counter for loved ones
   let lovedOneCounter = 1;
   let eventCounter = 1;
   
-  // Add Loved One Button
   const addLovedOneBtn = document.getElementById('addLovedOneBtn');
   const lovedOnesDates = document.getElementById('lovedOnesDates');
   
@@ -37,18 +35,15 @@ document.addEventListener('DOMContentLoaded', function() {
       
       lovedOnesDates.appendChild(newRow);
       
-      // Enable remove button on the first row if there are now multiple rows
       if (lovedOneCounter === 2) {
         document.querySelector('#lovedOne1 .btn-remove-date').disabled = false;
       }
       
-      // Add event listener for the new remove button
       const removeBtn = newRow.querySelector('.btn-remove-date');
       if (removeBtn) {
         removeBtn.addEventListener('click', function() {
           newRow.remove();
           
-          // If only one row remains, disable its remove button
           const remainingRows = document.querySelectorAll('.loved-one-row');
           if (remainingRows.length === 1) {
             remainingRows[0].querySelector('.btn-remove-date').disabled = true;
@@ -58,7 +53,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
   
-  // Add Event Button
   const addEventBtn = document.getElementById('addEventBtn');
   const specialEventsDates = document.getElementById('specialEventsDates');
   
@@ -84,18 +78,15 @@ document.addEventListener('DOMContentLoaded', function() {
       
       specialEventsDates.appendChild(newRow);
       
-      // Enable remove button on the first row if there are now multiple rows
       if (eventCounter === 2) {
         document.querySelector('#specialEventsDates .special-event-row:first-child .btn-remove-date').disabled = false;
       }
       
-      // Add event listener for the new remove button
       const removeBtn = newRow.querySelector('.btn-remove-date');
       if (removeBtn) {
         removeBtn.addEventListener('click', function() {
           newRow.remove();
           
-          // If only one row remains, disable its remove button
           const remainingRows = document.querySelectorAll('.special-event-row');
           if (remainingRows.length === 1) {
             remainingRows[0].querySelector('.btn-remove-date').disabled = true;
@@ -105,7 +96,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
   
-  // Save Dates Button
   const saveDatesBtn = document.getElementById('saveDatesBtn');
   const successModal = document.getElementById('successModal');
   const closeSuccessModal = document.getElementById('closeSuccessModal');
@@ -114,14 +104,9 @@ document.addEventListener('DOMContentLoaded', function() {
   
   if (saveDatesBtn && successModal) {
     saveDatesBtn.addEventListener('click', function() {
-      // In a real application, you would validate and save the form data here
-      // For demo purposes, we'll just show the success modal
-      
-      // Show success modal
       successModal.style.display = 'flex';
       if (overlay) overlay.style.display = 'block';
       
-      // Optionally collect form data and log it for demo purposes
       collectAndLogFormData();
     });
   }
@@ -137,13 +122,9 @@ document.addEventListener('DOMContentLoaded', function() {
     successModalBtn.addEventListener('click', function() {
       successModal.style.display = 'none';
       if (overlay) overlay.style.display = 'none';
-      
-      // Redirect to home page or another page if needed
-      // window.location.href = 'index.html';
     });
   }
   
-  // Helper function to collect and log form data (for demo purposes)
   function collectAndLogFormData() {
     const formData = {
       personalDates: {
@@ -159,7 +140,6 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     };
     
-    // Collect loved ones data
     const lovedOneRows = document.querySelectorAll('.loved-one-row');
     lovedOneRows.forEach((row, index) => {
       const rowNumber = index + 1;
@@ -172,7 +152,6 @@ document.addEventListener('DOMContentLoaded', function() {
       formData.lovedOnes.push(lovedOne);
     });
     
-    // Collect special events data
     const eventRows = document.querySelectorAll('.special-event-row');
     eventRows.forEach((row, index) => {
       const rowNumber = index + 1;
@@ -183,7 +162,6 @@ document.addEventListener('DOMContentLoaded', function() {
       formData.specialEvents.push(event);
     });
     
-    // In a real application, you would send this data to a server
     console.log('Form Data:', formData);
   }
 }); 

@@ -129,6 +129,10 @@ document.addEventListener('DOMContentLoaded', function() {
       this.style.animation = 'none';
       this.offsetHeight;
       this.style.animation = 'logoSpin 1s ease-in-out';
+      
+      setTimeout(() => {
+        window.location.href = 'index.html';
+      }, 1000);
     });
   }
 });
